@@ -7,12 +7,21 @@ using MessageQueue.Messaging.Spec;
 
 namespace MessageQueue.Messaging.Impl
 {
-    public abstract class MessageQueueBase:IDisposable
+    public abstract class MessageQueueBase:IMessageQueue,IDisposable
     {
         public Direction Direction { get; set; }
         public MessagePattern Pattern { get; set; }
         public string Address { get; private set; }
         public Dictionary<string, object> Properties { get; set; }
+
+
+        public abstract void InitialiseOutbound(string address, MessagePattern pattern,
+            Dictionary<string, object> properties = null);
+
+        public abstract void InitialiseInbound(string address, MessagePattern pattern,
+            Dictionary<string, object> properties = null);
+
+        public abstract void Send(Message message);
 
         protected virtual void Initialize(Direction direction, string name, MessagePattern pattern, Dictionary<string, object> properties)
         {
@@ -24,24 +33,18 @@ namespace MessageQueue.Messaging.Impl
 
         protected void RequireProperty<T>(string name)
         {
-            
+                        
         }
 
-        protected abstract void InitializeOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties);
+        public abstract void Listen(Action<Message> onMessageReceived);
 
-        protected abstract void IntializeInbound(string name, MessagePattern pattern, Dictionary<string, object> properties);
-
-        protected abstract void Send(Message message);
-
-        protected abstract void Listen(Action<Message> onMessageReceived);
-
-        protected abstract void Receive(Action<Message> onMessageReceived);
+        public abstract void Receive(Action<Message> onMessageReceived);
 
         protected abstract string GetAddress(string name);
 
-        protected abstract IMessageQueue GetResponseQueue();
+        public abstract IMessageQueue GetResponseQueue();
 
-        protected abstract IMessageQueue GetReplyQueue(Message message);
+        public abstract IMessageQueue GetReplyQueue(Message message);
 
         public abstract void Dispose();
     }

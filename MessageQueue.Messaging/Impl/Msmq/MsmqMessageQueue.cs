@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using MessageQueue.Messaging.Extensions;
 using MessageQueue.Messaging.Spec;
 using msmq = System.Messaging;
 
@@ -15,12 +16,12 @@ namespace MessageQueue.Messaging.Impl.Msmq
         private bool _useTemporaryQueue;
 
 
-        protected override void InitializeOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
+        public override void InitialiseOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
         {
             throw new NotImplementedException();
         }
 
-        protected override void IntializeInbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
+        public override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
         {
             Initialize(Direction.Inbound, name, pattern, properties);
             switch (pattern)
@@ -38,7 +39,7 @@ namespace MessageQueue.Messaging.Impl.Msmq
             }
         }
 
-        protected override void Send(Message message)
+        public override void Send(Message message)
         {
             var outbound = new msmq.Message();
             outbound.BodyStream = message.ToJsonStream();
@@ -49,7 +50,7 @@ namespace MessageQueue.Messaging.Impl.Msmq
             _queue.Send(outbound);
         }
 
-        protected override void Listen(Action<Message> onMessageReceived)
+        public override void Listen(Action<Message> onMessageReceived)
         {
             while (true)
             {
@@ -57,9 +58,9 @@ namespace MessageQueue.Messaging.Impl.Msmq
             }
         }
 
-        protected override void Receive(Action<Message> onMessageReceived)
+        public override void Receive(Action<Message> onMessageReceived)
         {
-            var inbound = _queue.Recieve();
+            var inbound = _queue.Receive();
             var message = Message.FromJson(inbound.BodyStream);
             onMessageReceived(message);
         }
@@ -90,12 +91,12 @@ namespace MessageQueue.Messaging.Impl.Msmq
 
         }
 
-        protected override IMessageQueue GetResponseQueue()
+        public override IMessageQueue GetResponseQueue()
         {
             throw new NotImplementedException();
         }
 
-        protected override IMessageQueue GetReplyQueue(Message message)
+        public override IMessageQueue GetReplyQueue(Message message)
         {
             throw new NotImplementedException();
         }
