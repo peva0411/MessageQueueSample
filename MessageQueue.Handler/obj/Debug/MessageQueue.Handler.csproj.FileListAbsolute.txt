@@ -1,0 +1,16 @@
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.exe.config
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\libzmq.dll
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.exe
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messaging.dll
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\clrzmq.dll
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messaging.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\clrzmq.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\clrzmq.xml
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\MessageQueueSample\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.exe
+C:\Projects\MessageQueueSample\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.dll
+C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.csprojResolveAssemblyReference.cache

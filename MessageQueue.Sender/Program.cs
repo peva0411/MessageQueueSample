@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MessageQueue.Messages;
 using MessageQueue.Messaging;
 using MessageQueue.Messaging.Spec;
 
@@ -12,35 +13,23 @@ namespace MessageQueue.Sender
     {
         static void Main(string[] args)
         {
-            var exists = false;
-
-            var doesUserExistRequest = new DoesUserExistRequest
+            while (true)
             {
-                EmailAddress = "peva0411@github.com"
-            };
+                Console.WriteLine("Enter Email:");
+                var email = Console.ReadLine();
 
-            var queue = MessageQueueFactory.CreateOutbound("doesuserexist", MessagePattern.RequestResponse);
-            var responseQueue = queue.GetResponseQueue();
+                var doesUserExistRequest = new UserUnsubscribeRequest
+                {
+                    EmailAddress = email
+                };
 
-            queue.Send(new Message()
-            {
-                Body = doesUserExistRequest,
-                ResponseAddress = responseQueue.Address
-            });
+                var queue = MessageQueueFactory.CreateOutbound("unsubscribe", MessagePattern.FireAndForget);
 
-            responseQueue.Receive(x => exists = x.BodyAs<DoesUserExistResponse>().Exists);
-
-            Console.WriteLine("User: {0}", exists);
+                queue.Send(new Message()
+                {
+                    Body = doesUserExistRequest
+                });
+            }
         }
-    }
-
-    public class DoesUserExistResponse
-    {
-        public bool Exists { get; set; }
-    }
-
-    public class DoesUserExistRequest
-    {
-        public string EmailAddress { get; set; }
     }
 }

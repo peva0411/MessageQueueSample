@@ -41,8 +41,8 @@ namespace MessageQueue.Messaging
 
         private static IMessageQueue Create()
         {
-            //return new MsmqMessageQueue();
-            return new ZeroMqMessageQueue();
+            return new MsmqMessageQueue();
+            //return new ZeroMqMessageQueue();
         }
     }
 }

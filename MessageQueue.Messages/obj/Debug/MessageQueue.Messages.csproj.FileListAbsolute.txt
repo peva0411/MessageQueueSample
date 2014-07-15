@@ -1,0 +1,4 @@
+C:\Projects\MessageQueueSample\MessageQueue.Messages\bin\Debug\MessageQueue.Messages.dll
+C:\Projects\MessageQueueSample\MessageQueue.Messages\bin\Debug\MessageQueue.Messages.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Messages\obj\Debug\MessageQueue.Messages.dll
+C:\Projects\MessageQueueSample\MessageQueue.Messages\obj\Debug\MessageQueue.Messages.pdb

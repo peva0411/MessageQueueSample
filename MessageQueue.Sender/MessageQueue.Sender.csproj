@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MessageQueue.Messages\MessageQueue.Messages.csproj">
+      <Project>{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}</Project>
+      <Name>MessageQueue.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MessageQueue.Messaging\MessageQueue.Messaging.csproj">
       <Project>{5D3E41ED-313A-4B2F-A4BB-26777A9E30D3}</Project>
       <Name>MessageQueue.Messaging</Name>

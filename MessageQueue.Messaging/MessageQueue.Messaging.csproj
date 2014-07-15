@@ -61,7 +61,12 @@
     <Compile Include="Spec\Message.cs" />
     <Compile Include="Spec\MessagePattern.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MessageQueue.Messages\MessageQueue.Messages.csproj">
+      <Project>{d60e2b9f-7350-400e-ac51-c2c09b45c6f0}</Project>
+      <Name>MessageQueue.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="libzmq.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,0 +1,16 @@
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.exe.config
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\libzmq.dll
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.exe
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messaging.dll
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\clrzmq.dll
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messaging.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\clrzmq.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\clrzmq.xml
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\MessageQueueSample\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.csprojResolveAssemblyReference.cache
+C:\Projects\MessageQueueSample\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.exe
+C:\Projects\MessageQueueSample\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.pdb
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.dll
+C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.pdb

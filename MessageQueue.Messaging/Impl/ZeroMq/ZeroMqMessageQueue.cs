@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
         private static Context _Context;
         private static object _ContextLock = new object();
 
-        protected override void InitialiseOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
+        public override void InitialiseOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
         {
             Initialize(Direction.Outbound, name, pattern, properties);
             EnsureContext();
@@ -42,7 +43,7 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
             }
         }
 
-        protected override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
+        public override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
         {
             Initialize(Direction.Inbound, name, pattern, properties);
             EnsureContext();
@@ -55,13 +56,13 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
             }
         }
 
-        protected override void Send(Message message)
+        public override void Send(Message message)
         {
             var json = message.ToJsonString();
             _socket.Send(json, Encoding.UTF8);
         }
 
-        protected override void Listen(Action<Message> onMessageReceived)
+        public override void Listen(Action<Message> onMessageReceived)
         {
             while (true)
             {
@@ -69,10 +70,10 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
             }
         }
 
-        protected override void Receive(Action<Message> onMessageReceived)
+        public override void Receive(Action<Message> onMessageReceived)
         {
-            var inbound = _socket.Recv(Encoding.UTF8);
-            var message = Message.FromJson(inbound);
+            string inbound = _socket.Recv(Encoding.UTF8);
+            var message = Message.FromJson(inbound.ToJsonStream());
             onMessageReceived(message);
         }
 
@@ -98,7 +99,12 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
             return this;
         }
 
-        public override void Dispose(bool disposing)
+        public override void Dispose()
+        {
+            Dispose(true);
+        }
+
+        public void Dispose(bool disposing)
         {
             if (disposing && _socket != null)
             {

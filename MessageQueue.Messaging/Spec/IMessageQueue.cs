@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MessageQueue.Messaging.Spec
 {
-    public interface IMessageQueue
+    public interface IMessageQueue : IDisposable
     {
         string Address { get; }
 

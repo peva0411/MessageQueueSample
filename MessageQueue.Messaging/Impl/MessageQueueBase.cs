@@ -7,7 +7,7 @@ using MessageQueue.Messaging.Spec;
 
 namespace MessageQueue.Messaging.Impl
 {
-    public abstract class MessageQueueBase:IMessageQueue,IDisposable
+    public abstract class MessageQueueBase:IMessageQueue
     {
         public Direction Direction { get; set; }
         public MessagePattern Pattern { get; set; }

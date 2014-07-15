@@ -31,15 +31,20 @@ namespace MessageQueue.Messaging.Spec
 
         public string MessageType { get; set; }
 
-        public TBody BodyAs<TBody>()
+        public T BodyAs<T>()
         {
-            return (TBody) Body;
+            return (T)Body;
         }
 
         public static Message FromJson(Stream jsonStream)
         {
             var message = jsonStream.ReadFromJson<Message>();
-            
+
+            var bodyStream = message.Body.ToJsonStream();
+
+            message.Body = bodyStream.ReadFromJson(message.MessageType);
+
+            return message;
         }
     }
 }

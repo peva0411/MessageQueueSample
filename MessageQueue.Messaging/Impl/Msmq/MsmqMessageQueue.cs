@@ -15,10 +15,22 @@ namespace MessageQueue.Messaging.Impl.Msmq
         private msmq.MessageQueue _queue;
         private bool _useTemporaryQueue;
 
-
         public override void InitialiseOutbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
         {
-            throw new NotImplementedException();
+            Initialize(Direction.Outbound, name, pattern, properties);
+            switch (pattern)
+            {
+                case MessagePattern.PublishSubscribe:
+                    _queue = new msmq.MessageQueue(Address);
+                    break;
+
+                case MessagePattern.RequestResponse:
+                    _queue = _useTemporaryQueue ? msmq.MessageQueue.Create(Address) : new msmq.MessageQueue(Address);
+                    break;
+                default:
+                    _queue = new msmq.MessageQueue(Address);
+                    break;
+            }
         }
 
         public override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties = null)
@@ -87,8 +99,9 @@ namespace MessageQueue.Messaging.Impl.Msmq
                     return ".\\private$\\messagequeue.unsubscribe-crm";
                 case "unsubscribe-fulfilment":
                     return ".\\private$\\messagequeue.unsubscribe-fulfilment";
+                default:
+                    throw new Exception(string.Format("{0} is not a valid queue name.", name.ToLower()));
             }
-
         }
 
         public override IMessageQueue GetResponseQueue()
@@ -98,12 +111,12 @@ namespace MessageQueue.Messaging.Impl.Msmq
 
         public override IMessageQueue GetReplyQueue(Message message)
         {
-            throw new NotImplementedException();
+          throw new NotImplementedException();
         }
 
         public override void Dispose()
         {
-            throw new NotImplementedException();
+            _queue.Dispose();
         }
     }
 }
