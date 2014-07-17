@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueue.Sender", "Mess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueue.Handler", "MessageQueue.Handler\MessageQueue.Handler.csproj", "{6E5A62F9-9410-4B18-9F99-1BB7FA484968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueue.Messages", "MessageQueue.Messages\MessageQueue.Messages.csproj", "{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{6E5A62F9-9410-4B18-9F99-1BB7FA484968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E5A62F9-9410-4B18-9F99-1BB7FA484968}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E5A62F9-9410-4B18-9F99-1BB7FA484968}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D60E2B9F-7350-400E-AC51-C2C09B45C6F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

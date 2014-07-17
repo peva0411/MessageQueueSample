@@ -26,6 +26,36 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
                         _socket = _Context.Socket(SocketType.REQ);
                         _socket.Connect(Address);
                         break;
+                case MessagePattern.FireAndForget:
+                    _socket = _Context.Socket(SocketType.PUSH);
+                    _socket.Connect(Address);
+                    break;
+                case MessagePattern.PublishSubscribe:
+                    _socket = _Context.Socket(SocketType.PUB);
+                    _socket.Bind(Address);
+                    break;
+            }
+        }
+
+        public override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
+        {
+            Initialize(Direction.Inbound, name, pattern, properties);
+            EnsureContext();
+            switch (Pattern)
+            {
+                case MessagePattern.RequestResponse:
+                    _socket = _Context.Socket(SocketType.REP);
+                    _socket.Bind(Address);
+                    break;
+                case MessagePattern.FireAndForget:
+                    _socket = _Context.Socket(SocketType.PULL);
+                    _socket.Bind(Address);
+                    break;
+                case MessagePattern.PublishSubscribe:
+                    _socket = _Context.Socket(SocketType.SUB);
+                    _socket.Connect(Address);
+                    _socket.Subscribe("", Encoding.UTF8);
+                    break;
             }
         }
 
@@ -40,19 +70,6 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
                         _Context = new Context();
                     }
                 }
-            }
-        }
-
-        public override void InitialiseInbound(string name, MessagePattern pattern, Dictionary<string, object> properties)
-        {
-            Initialize(Direction.Inbound, name, pattern, properties);
-            EnsureContext();
-            switch (Pattern)
-            {
-                case MessagePattern.RequestResponse:
-                    _socket = _Context.Socket(SocketType.REP);
-                    _socket.Bind(Address);
-                    break;
             }
         }
 
@@ -72,8 +89,8 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
 
         public override void Receive(Action<Message> onMessageReceived)
         {
-            string inbound = _socket.Recv(Encoding.UTF8);
-            var message = Message.FromJson(inbound.ToJsonStream());
+            var inbound = _socket.Recv(Encoding.UTF8);
+            var message = Message.FromJson(inbound);
             onMessageReceived(message);
         }
 
@@ -83,7 +100,16 @@ namespace MessageQueue.Messaging.Impl.ZeroMq
             {
                 case"doesuserexist":
                     return "tcp://127.0.0.1:5556";
-                    break;
+                case "unsubscribe":
+                    return "tcp://127.0.0.1:5555";
+                case "unsubscribe-event":
+                    return "pgm://127.0.0.1:5557;239.192.1.1:5557";
+                case "unsubscribe-legacy":
+                    return "pgm://127.0.0.1:5557;239.192.1.1:5557";
+                case "unsubscribe-crm":
+                    return "pgm://127.0.0.1:5557;239.192.1.1:5557";
+                case "unsubscribe-fulfilment":
+                    return "pgm://127.0.0.1:5557;239.192.1.1:5557";
                 default:
                     throw new ArgumentException(string.Format("Uknown queue name: {0}", name));
             }

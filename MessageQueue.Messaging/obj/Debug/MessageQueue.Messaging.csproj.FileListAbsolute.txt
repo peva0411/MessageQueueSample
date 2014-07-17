@@ -1,4 +1,3 @@
-c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\obj\Debug\MessageQueue.Messaging.csprojResolveAssemblyReference.cache
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\bin\Debug\libzmq.dll
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\bin\Debug\MessageQueue.Messaging.dll
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\bin\Debug\MessageQueue.Messaging.pdb
@@ -15,3 +14,18 @@ C:\Projects\MessageQueueSample\MessageQueue.Messaging\obj\Debug\MessageQueue.Mes
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\obj\Debug\MessageQueue.Messaging.csprojResolveAssemblyReference.cache
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\bin\Debug\MessageQueue.Messages.dll
 C:\Projects\MessageQueueSample\MessageQueue.Messaging\bin\Debug\MessageQueue.Messages.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\libzmq.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\MessageQueue.Messaging.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\MessageQueue.Messaging.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq-ext.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\MessageQueue.Messages.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\Newtonsoft.Json.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\MessageQueue.Messages.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq.xml
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq-ext.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\clrzmq-ext.xml
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\bin\Debug\Newtonsoft.Json.xml
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\obj\Debug\MessageQueue.Messaging.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Messaging\obj\Debug\MessageQueue.Messaging.pdb

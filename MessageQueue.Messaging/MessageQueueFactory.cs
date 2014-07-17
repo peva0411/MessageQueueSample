@@ -29,7 +29,7 @@ namespace MessageQueue.Messaging
         public static IMessageQueue CreateOutbound(string name, MessagePattern pattern,
             Dictionary<string, object> properties = null)
         {
-            var key = string.Format("{0}:{1}:{2}", Direction.Inbound, name, pattern);
+            var key = string.Format("{0}:{1}:{2}", Direction.Outbound, name, pattern);
             if (_Queues.ContainsKey(key))
                 return _Queues[key];
 
@@ -42,7 +42,7 @@ namespace MessageQueue.Messaging
         private static IMessageQueue Create()
         {
             return new MsmqMessageQueue();
-            //return new ZeroMqMessageQueue();
+            return new ZeroMqMessageQueue();
         }
     }
 }

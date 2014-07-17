@@ -13,23 +13,51 @@ namespace MessageQueue.Sender
     {
         static void Main(string[] args)
         {
-            while (true)
+            if (args[0] == "userentered")
             {
-                Console.WriteLine("Enter Email:");
-                var email = Console.ReadLine();
-
-                var doesUserExistRequest = new UserUnsubscribeRequest
+                while (true)
                 {
-                    EmailAddress = email
-                };
+                    Console.WriteLine("Enter Email:");
+                    var email = Console.ReadLine();
 
-                var queue = MessageQueueFactory.CreateOutbound("unsubscribe", MessagePattern.FireAndForget);
+                    var doesUserExistRequest = new UserUnsubscribeRequest
+                    {
+                        EmailAddress = email
+                    };
 
-                queue.Send(new Message()
-                {
-                    Body = doesUserExistRequest
-                });
+                    var queue = MessageQueueFactory.CreateOutbound("unsubscribe", MessagePattern.FireAndForget);
+
+                    queue.Send(new Message()
+                    {
+                        Body = doesUserExistRequest
+                    });
+                }
             }
+
+            if (args[0] == "mass")
+            {
+                var upper = Int32.Parse(args[1]);
+
+                for (int i = 0; i < upper; i++)
+                {
+                    var email = string.Format("address{0}@email.com", i);
+
+                    var doesUserExistRequest = new UserUnsubscribeRequest
+                    {
+                        EmailAddress = email
+                    };
+
+                    var queue = MessageQueueFactory.CreateOutbound("unsubscribe", MessagePattern.FireAndForget);
+
+                    queue.Send(new Message()
+                    {
+                        Body = doesUserExistRequest
+                    });
+
+                    Console.WriteLine("Sent request for: {0}", email);
+                }
+            }
+
         }
     }
 }

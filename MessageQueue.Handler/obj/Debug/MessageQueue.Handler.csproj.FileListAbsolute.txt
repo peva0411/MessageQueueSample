@@ -14,3 +14,19 @@ C:\Projects\MessageQueueSample\MessageQueue.Handler\obj\Debug\MessageQueue.Handl
 C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.dll
 C:\Projects\MessageQueueSample\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.pdb
 C:\Projects\MessageQueueSample\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.csprojResolveAssemblyReference.cache
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.exe.config
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.exe
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.pdb
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\libzmq.dll
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.exe
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Handler.pdb
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.dll
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Messaging.dll
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\clrzmq.dll
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Messaging.pdb
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\MessageQueue.Messages.pdb
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\clrzmq.pdb
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\clrzmq.xml
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Phil\Documents\Visual Studio 2013\Projects\MessageQueue\MessageQueue.Handler\obj\Debug\MessageQueue.Handler.csprojResolveAssemblyReference.cache

@@ -14,3 +14,19 @@ C:\Projects\MessageQueueSample\MessageQueue.Sender\obj\Debug\MessageQueue.Sender
 C:\Projects\MessageQueueSample\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.pdb
 C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.dll
 C:\Projects\MessageQueueSample\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\libzmq.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.exe.config
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.exe
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Sender.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Messaging.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\clrzmq.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\Newtonsoft.Json.dll
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Messaging.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\MessageQueue.Messages.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\clrzmq.pdb
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\clrzmq.xml
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\bin\Debug\Newtonsoft.Json.xml
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.csprojResolveAssemblyReference.cache
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.exe
+c:\users\phil\documents\visual studio 2013\Projects\MessageQueue\MessageQueue.Sender\obj\Debug\MessageQueue.Sender.pdb

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MessageQueue.Messaging.Extensions;
+using Newtonsoft.Json;
 
 namespace MessageQueue.Messaging.Spec
 {
@@ -46,5 +47,17 @@ namespace MessageQueue.Messaging.Spec
 
             return message;
         }
+
+        public static Message FromJson(string json)
+        {
+            var message = JsonConvert.DeserializeObject<Message>(json);
+
+            var bodyStream = message.Body.ToJsonStream();
+
+            message.Body = bodyStream.ReadFromJson(message.MessageType);
+
+            return message;
+        }
+
     }
 }
